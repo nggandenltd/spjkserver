@@ -1,5 +1,4 @@
 echo "Regist Device...."
 sleep 2
-touch /data/tmp/s.p.j.k
 echo ""
 echo "Your device registerd VIP SPJK"
