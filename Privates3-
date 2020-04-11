@@ -1,0 +1,243 @@
+sd=storage/emulated/0
+DATA1=storage/emulated/0/Android/data/com.tencent.ig
+DATA2=storage/emulated/0/Android/data/com.tencent.ig/files
+DATA3=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra
+DATA4=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra
+DATA5=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved
+PAKS=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+
+clear()
+{
+rm -rf /storage/emulated/0/.chaozhuo.gameassistant
+rm -rf /storage/emulated/0/backups
+rm -rf /storage/emulated/0/.estrongs
+rm -rf /storage/emulated/0/.dlprovider
+rm -rf /storage/emulated/0/osmini
+rm -f /cache/magisk.log
+rm -f /cache/magisk.log.bak
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "RECORD FILES DELETED━━━━SPJK━━━━�"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+date
+sleep 10
+}
+
+instal()
+{
+if [ ! -d "/data/data/com.tencent.ig" ];
+then
+echo "- PUBGM GLOBAL Tidak Terinstall"
+echo "- Silahkan Install Terlebih Dahulu Apk PUBG GLOBAL 0.17.0"
+exit 0;
+fi
+echo "[STARTING BYPASS]"
+sleep 1
+echo ""
+echo "Please Wait......"
+sleep 1
+echo ""
+echo "_Making Directory.."
+sleep 2
+mkdir /sdcard/.spjkbackup
+rm -rf /storage/emulated/0/.backups/com.tencent.ig
+touch /storage/emulated/0/.backups/com.tencent.ig
+chattr -i /storage/emulated/0/.backups/com.tencent.ig
+rm -rf /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
+touch /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
+chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
+chmod -R 555 /data/media/0/MidasOversea/GUID
+echo "__Replacing File for Game Crash.."
+sleep 3
+rm -rf /data/data/com.tencent.ig/app_crashrecord
+rm -rf /data/data/com.tencent.ig/files
+touch /data/data/com.tencent.ig/app_crashrecord
+touch /data/data/com.tencent.ig/files
+echo "___Deleting Magisk LOG.."
+sleep 2
+rm -f /cache/magisk.log
+rm -f /cache/magisk.log.bak
+sleep 1
+echo ""
+echo "____Downloading Data bypass SPJK.."
+wget https://raw.githubusercontent.com/nggandenltd/servers12/master/dataBypass1
+wget https://raw.githubusercontent.com/nggandenltd/servers12/master/dataBypass2
+sleep 1
+echo ""
+echo "_Move DATA.."
+sleep 2
+mv dataBypass1 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11800.pak
+cp -R dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11801.pak
+cp -R dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11801.pak
+mv dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11807.pak
+sleep 1
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11800.pak" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11801.pak" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11807.pak" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11801.pak" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+echo "Installasi Selesai"
+}
+
+datamod()
+{
+rm -rf /$sd/log 2>/dev/null
+rm -rf /$DATA1/cache 2>/dev/null
+rm -rf /$DATA2/{ca-bundle.pem,login-identifier.txt,ProgramBinaryCache,tbslog,vmpcloudconfig.json} 2>/dev/null
+rm -rf /$DATA3/{Engine,'Epic Games',Paks} 2>/dev/null
+rm -rf /$DATA4/{Content,Intermediate} 2>/dev/null
+rm -rf /$DATA5/{GameErrorNoRecords,Logs,Pandora,PufferTmpDir,rawdata,RoleInfo,UpdateInfo} 2>/dev/null
+rm -rf /$PAKS/*cures*
+rm -rf /$PAKS/{apollo_reslist.flist,filelist.json,new.filelist,puffer_res.eifs,puffer_temp,PufferFileList.json} 2>/dev/null
+rm -rf /data/dalvik-cache/arm/data@app@com.tencent.ig-2@base.apk@classes.dex 2>/dev/null
+mkdir -p /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+touch /$sd/log 2>/dev/null
+touch /$DATA1/cache 2>/dev/null
+mkdir -p /$DATA2/{ca-bundle.pem,login-identifier.txt,vmpcloudconfig.json} 2>/dev/null
+touch /$DATA2/ProgramBinaryCache 2>/dev/null
+touch /$DATA2/tbslog 2>/dev/null
+touch /$DATA3/Engine 2>/dev/null
+touch /$DATA3/'Epic Games' 2>/dev/null
+touch /$DATA3/Paks 2>/dev/null
+touch /$DATA4/Content 2>/dev/null
+touch /$DATA4/Intermediate 2>/dev/null
+touch /$DATA5/Logs 2>/dev/null
+touch /$DATA5/Pandora 2>/dev/null
+touch /$DATA5/PufferTmpDir 2>/dev/null
+touch /$DATA5/rawdata 2>/dev/null
+touch /$DATA5/RoleInfo 2>/dev/null
+touch /$DATA5/UpdateInfo 2>/dev/null
+mkdir -p /$DATA5/GameErrorNoRecords 2>/dev/null
+touch /$PAKS/1375135419_47_0.17.0.11807_20200319093652_1583227858_cures.ifs.res 2>/dev/null
+touch /$PAKS/apollo_reslist.flist 2>/dev/null
+touch /$PAKS/filelist.json 2>/dev/null
+touch /$PAKS/new.filelist 2>/dev/null
+touch /$PAKS/puffer_res.eifs 2>/dev/null
+touch /$PAKS/puffer_temp 2>/dev/null
+touch /$PAKS/PufferFileList.json 2>/dev/null
+mkdir -p /data/dalvik-cache/arm/data@app@com.tencent.ig-2@base.apk@classes.dex 2>/dev/null
+}
+
+repair()
+{
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11800.pak
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11801.pak
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11801.pak
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11807.pak
+rm -rf /$sd/log 2>/dev/null
+rm -rf /$DATA1/cache 2>/dev/null
+rm -rf /$DATA2/{ca-bundle.pem,login-identifier.txt,ProgramBinaryCache,tbslog,vmpcloudconfig.json} 2>/dev/null
+rm -rf /$DATA3/{Engine,'Epic Games',Paks} 2>/dev/null
+rm -rf /$DATA4/{Content,Intermediate} 2>/dev/null
+rm -rf /$DATA5/{GameErrorNoRecords,Logs,Pandora,PufferTmpDir,rawdata,RoleInfo,UpdateInfo} 2>/dev/null
+rm -rf /$PAKS/*cures*
+rm -rf /$PAKS/{apollo_reslist.flist,filelist.json,new.filelist,puffer_res.eifs,puffer_temp,PufferFileList.json} 2>/dev/null
+rm -rf /data/dalvik-cache/arm/data@app@com.tencent.ig-2@base.apk@classes.dex 2>/dev/null
+mv /sdcard/.spjkbackup/* /$PAKS/
+rm -rf /sdcard/.spjkbackup
+}
+
+echo "Scanning Device......."
+sleep 2
+if [ ! -f "/data/tmp/s.p.j.k" ];
+then
+echo ""
+echo "_Failed to Execute"
+echo "_Your Device Not Registerd"
+echo ""
+echo "Creator @admsprojecthack"
+exit 0;
+fi
+echo "√••••••••[START]•••••••••••••••••••••••••••••••••"
+echo "[ VIP PUBG MOBILE GLOBAL SPJK ]"
+echo ""
+sleep 1
+echo "[ ID MEMBER: NOK | ICE ]"
+echo "[ TELEGRAM:  @admsprojecthack ]"
+echo "[ TELEGRAM CHANNEL: https://t.me/spjkchannel ]"
+echo "[ Coding By: Bagus Satria Sindurahman Putra ]"
+echo ""
+instal
+echo""
+echo "_____[RULES]"
+echo "___Use BYPASS LOBBY Script SPJK"
+sleep 1
+echo ""
+echo "ENGLISH"
+echo "SAFE FEATURES :"
+echo "-Wallhack & Collor"
+echo "-Less Recoil"
+echo "-Magic Bullet & Headshot"
+echo ""
+echo "# Avoid report in GAME"
+echo "# Don't use features other than above"
+echo "# If you really want to Push RANK !!"
+echo "# Do not shoot enemies behind the Wall, Trees, Stones and so on, shoot when the enemy is right seen and logical to kill"
+echo "# Play Like a PRO PLAYER"
+echo ""
+echo "PLEASE READ !"
+echo " "
+sleep 15
+echo "Starting SPJK Game Guardian...\n"
+sleep 1
+am start -n com.xbvqitfebbloqbyh/com.xbvqitfebbloqbyh.MainActivity
+sleep 2
+am start -n com.xbvqitfebbloqbyh/com.xbvqitfebbloqbyh.MainActivity
+sleep 3
+am start -n bin.mt.plus/bin.mt.plus.Main
+sleep 2
+echo "Starting PUBG MOBILE GLOBAL"
+sleep 3
+am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
+sleep 50
+cp -R /$PAKS/apollo_reslist.flist /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/filelist.json /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/new.filelist /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/puffer_res.eifs /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/PufferFileList.json /sdcard/.spjkbackup/ 2>/dev/null
+sleep 1
+datamod
+PACKAGE='com.tencent.ig'
+while [ $(pidof $PACKAGE) ]
+do
+clear
+if [ ! $(pidof $PACKAGE) ]; then
+break
+fi
+sleep 1
+done
+am start -n bin.mt.plus/bin.mt.plus.Main
+echo "•PUBG MOBILE BERHENTI"
+echo "Menata Ulang Paks Game !"
+echo "Tunggu Sebentar....."
+echo "_Menutup Game Guardian"
+am force-stop com.xbvqitfebbloqbyh
+repair
+echo "All DONE !"
+echo "• Coding By @admsprojecthack"
