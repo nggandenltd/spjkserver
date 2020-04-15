@@ -30,11 +30,14 @@ echo "- PUBGM GLOBAL Tidak Terinstall"
 echo "- Silahkan Install Terlebih Dahulu Apk PUBG GLOBAL 0.17.0"
 exit 0;
 fi
-echo "[MEMULAI INSTALLASI DATA BYPASS GLOBAL v8]"
+echo "[STARTING BYPASS]"
 sleep 1
 echo ""
-echo "Tunggu Sebentar......"
+echo "Please Wait......"
+sleep 1
 echo ""
+echo "_Making Directory.."
+sleep 2
 mkdir /sdcard/.spjkbackup
 rm -rf /storage/emulated/0/.backups/com.tencent.ig
 touch /storage/emulated/0/.backups/com.tencent.ig
@@ -43,20 +46,51 @@ rm -rf /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
 touch /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
 chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
 chmod -R 555 /data/media/0/MidasOversea/GUID
+echo "__Replacing File for Game Crash.."
+sleep 3
 rm -rf /data/data/com.tencent.ig/app_crashrecord
 rm -rf /data/data/com.tencent.ig/files
 touch /data/data/com.tencent.ig/app_crashrecord
 touch /data/data/com.tencent.ig/files
+echo "___Deleting Magisk LOG.."
+sleep 2
 rm -f /cache/magisk.log
 rm -f /cache/magisk.log.bak
 sleep 1
+echo ""
+echo "____Downloading Data bypass SPJK.."
 wget https://raw.githubusercontent.com/nggandenltd/servers12/master/dataBypass1
 wget https://raw.githubusercontent.com/nggandenltd/servers12/master/dataBypass2
 sleep 1
+echo ""
+echo "_Move DATA.."
+sleep 2
 mv dataBypass1 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11800.pak
 cp -R dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11801.pak
 cp -R dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11801.pak
+cp -R dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11800.pak
+cp -R dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11804.pak
 mv dataBypass2 /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11807.pak
+rm -rf /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SrcVersion.ini
+echo -e "[version]
+appversion=0.17.0.11800
+srcversion=0.17.0.11807
+" > /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SrcVersion.ini
+mv /$PAKS/core_patch_0.17.0.11808.pak /sdcard/.spjkbackup/ 2>/dev/null
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*/*
+chmod -R 550 /data/media/0/Android/data/com.tencent.ig/files
+chmod -R 664 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/*
+chmod -R 444 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/*
+chmod -R 555 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ODPaks
+chmod -R 444 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SrcVersion.ini
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/ProgramBinaryCache
 sleep 1
 if [ ! -f "/storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11800.pak" ];
 then
@@ -95,6 +129,25 @@ echo "Installasi Selesai"
 
 datamod()
 {
+chmod -R 777 /data/media/0/Android/data/com.tencent.ig
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ODPaks
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SrcVersion.ini
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/ProgramBinaryCache
+cp -R /$PAKS/apollo_reslist.flist /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/filelist.json /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/new.filelist /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/puffer_res.eifs /sdcard/.spjkbackup/ 2>/dev/null
+cp -R /$PAKS/PufferFileList.json /sdcard/.spjkbackup/ 2>/dev/null
 rm -rf /$sd/log 2>/dev/null
 rm -rf /$DATA1/cache 2>/dev/null
 rm -rf /$DATA2/{ca-bundle.pem,login-identifier.txt,ProgramBinaryCache,tbslog,vmpcloudconfig.json} 2>/dev/null
@@ -129,15 +182,45 @@ touch /$PAKS/new.filelist 2>/dev/null
 touch /$PAKS/puffer_res.eifs 2>/dev/null
 touch /$PAKS/puffer_temp 2>/dev/null
 touch /$PAKS/PufferFileList.json 2>/dev/null
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*
+chmod -R 544 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*/*
+chmod -R 550 /data/media/0/Android/data/com.tencent.ig/files
+chmod -R 664 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/*
+chmod -R 444 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/*
+chmod -R 555 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ODPaks
+chmod -R 444 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SrcVersion.ini
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/ProgramBinaryCache
 mkdir -p /data/dalvik-cache/arm/data@app@com.tencent.ig-2@base.apk@classes.dex 2>/dev/null
 }
 
 repair()
 {
+chmod -R 777 /data/media/0/Android/data/com.tencent.ig
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/*/*/*/*/*/*/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/*
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/ODPaks
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SrcVersion.ini
+chmod -R 770 /data/media/0/Android/data/com.tencent.ig/files/ProgramBinaryCache
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11800.pak
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.17.0.11801.pak
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11801.pak
 rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11807.pak
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11800.pak
+rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/core_patch_0.17.0.11804.pak
 rm -rf /$sd/log 2>/dev/null
 rm -rf /$DATA1/cache 2>/dev/null
 rm -rf /$DATA2/{ca-bundle.pem,login-identifier.txt,ProgramBinaryCache,tbslog,vmpcloudconfig.json} 2>/dev/null
@@ -149,12 +232,25 @@ rm -rf /$PAKS/{apollo_reslist.flist,filelist.json,new.filelist,puffer_res.eifs,p
 rm -rf /data/dalvik-cache/arm/data@app@com.tencent.ig-2@base.apk@classes.dex 2>/dev/null
 mv /sdcard/.spjkbackup/* /$PAKS/
 rm -rf /sdcard/.spjkbackup
+chmod 644 /data/app/com.tencent.ig*/base.apk
 }
 
-echo "√••••••••[START Season12]•••••••••••••••••••••••••••••••••"
-echo "[ VIP PUBG MOBILE GLOBAL BYPASS v8]"
+echo "Scanning Device......."
+sleep 2
+if [ ! -f "/data/tmp/s.p.j.k" ];
+then
+echo ""
+echo "_Failed to Execute"
+echo "_Your Device Not Registerd"
+echo ""
+echo "Creator @admsprojecthack"
+exit 0;
+fi
+echo "√••••••••[START]•••••••••••••••••••••••••••••••••"
+echo "[ VIP PUBG MOBILE GLOBAL SPJK ]"
 echo ""
 sleep 1
+echo "[ ID MEMBER: Admin ]"
 echo "[ TELEGRAM:  @admsprojecthack ]"
 echo "[ TELEGRAM CHANNEL: https://t.me/spjkchannel ]"
 echo "[ Coding By: Bagus Satria Sindurahman Putra ]"
@@ -162,20 +258,8 @@ echo ""
 instal
 echo""
 echo "_____[RULES]"
-echo "___Gunakan BYPASS LOBBY Script SPJK"
 echo "___Use BYPASS LOBBY Script SPJK"
 sleep 1
-echo ""
-echo "INDONESIA"
-echo "FITUR SAFE :"
-echo "-Wallhack & Collor"
-echo "-Less Recoil"
-echo "-Magic Bullet & Headshot"
-echo ""
-echo "# Hindari Report di dalam GAME"
-echo "# Jangan Gunakan fitur selain diatas"
-echo "# Jika kalian benar benar ingin Push RANK !!"
-echo "# Jangan Tembak musuh dibalik Tembok,Pohon,Batu dan sbagainya,tembaklah saat musuh benar benar terlihat dan logis untuk di bunuh"
 echo ""
 echo "ENGLISH"
 echo "SAFE FEATURES :"
@@ -187,10 +271,11 @@ echo "# Avoid report in GAME"
 echo "# Don't use features other than above"
 echo "# If you really want to Push RANK !!"
 echo "# Do not shoot enemies behind the Wall, Trees, Stones and so on, shoot when the enemy is right seen and logical to kill"
+echo "# Play Like a PRO PLAYER"
 echo ""
 echo "PLEASE READ !"
 echo " "
-sleep 1
+sleep 15
 echo "Starting SPJK Game Guardian...\n"
 sleep 1
 am start -n com.xbvqitfebbloqbyh/com.xbvqitfebbloqbyh.MainActivity
@@ -202,14 +287,9 @@ sleep 2
 echo "Starting PUBG MOBILE GLOBAL"
 sleep 3
 am start -n com.tencent.ig/com.epicgames.ue4.SplashActivity
-sleep 50
-cp -R /$PAKS/apollo_reslist.flist /sdcard/.spjkbackup/ 2>/dev/null
-cp -R /$PAKS/filelist.json /sdcard/.spjkbackup/ 2>/dev/null
-cp -R /$PAKS/new.filelist /sdcard/.spjkbackup/ 2>/dev/null
-cp -R /$PAKS/puffer_res.eifs /sdcard/.spjkbackup/ 2>/dev/null
-cp -R /$PAKS/PufferFileList.json /sdcard/.spjkbackup/ 2>/dev/null
-sleep 1
+sleep 80
 datamod
+chmod 000 /data/app/com.tencent.ig*/base.apk
 PACKAGE='com.tencent.ig'
 while [ $(pidof $PACKAGE) ]
 do
