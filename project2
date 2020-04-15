@@ -235,17 +235,6 @@ rm -rf /sdcard/.spjkbackup
 chmod 644 /data/app/com.tencent.ig*/base.apk
 }
 
-echo "Scanning Device......."
-sleep 2
-if [ ! -f "/data/tmp/s.p.j.k" ];
-then
-echo ""
-echo "_Failed to Execute"
-echo "_Your Device Not Registerd"
-echo ""
-echo "Creator @admsprojecthack"
-exit 0;
-fi
 echo "√••••••••[START]•••••••••••••••••••••••••••••••••"
 echo "[ VIP PUBG MOBILE GLOBAL SPJK ]"
 echo ""
