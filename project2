@@ -235,11 +235,13 @@ rm -rf /sdcard/.spjkbackup
 chmod 644 /data/app/com.tencent.ig*/base.apk
 }
 
-echo "√••••••••[START]•••••••••••••••••••••••••••••••••"
+echo "Scanning Device......."
+sleep 1
+echo "√••••••••[START v9]•••••••••••••••••••••••••••••••••"
 echo "[ VIP PUBG MOBILE GLOBAL SPJK ]"
 echo ""
 sleep 1
-echo "[ ID MEMBER: Admin ]"
+echo "[ User: Admin ]"
 echo "[ TELEGRAM:  @admsprojecthack ]"
 echo "[ TELEGRAM CHANNEL: https://t.me/spjkchannel ]"
 echo "[ Coding By: Bagus Satria Sindurahman Putra ]"
