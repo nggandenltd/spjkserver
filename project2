@@ -132,17 +132,6 @@ mv /sdcard/.spjkbackup/* /$PAKS/
 rm -rf /sdcard/.spjkbackup
 }
 
-echo "Scanning Device......."
-sleep 2
-if [ ! -f "/data/tmp/s.p.j.k" ];
-then
-echo ""
-echo "_Failed to Execute"
-echo "_Your Device Not Registerd"
-echo ""
-echo "Creator @admsprojecthack"
-exit 0;
-fi
 echo "√••••••••[START] Updated 21 April 2020•••••••••••••••••••••••••••••••••"
 echo "[ VVIP PUBG MOBILE GLOBAL SPJK v2]"
 echo ""
