@@ -8,11 +8,6 @@ PAKS=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerE
 
 clear()
 {
-rm -rf /storage/emulated/0/.chaozhuo.gameassistant
-rm -rf /storage/emulated/0/backups
-rm -rf /storage/emulated/0/.estrongs
-rm -rf /storage/emulated/0/.dlprovider
-rm -rf /storage/emulated/0/osmini
 rm -f /cache/magisk.log
 rm -f /cache/magisk.log.bak
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -39,13 +34,13 @@ echo ""
 echo "_Making Directory.."
 sleep 2
 mkdir /sdcard/.spjkbackup
+rm -rf /storage/emulated/0/.chaozhuo.gameassistant
+rm -rf /storage/emulated/0/backups
+rm -rf /storage/emulated/0/.estrongs
+rm -rf /storage/emulated/0/.dlprovider
+rm -rf /storage/emulated/0/osmini
 rm -rf /storage/emulated/0/.backups/com.tencent.ig
-touch /storage/emulated/0/.backups/com.tencent.ig
-chattr -i /storage/emulated/0/.backups/com.tencent.ig
 rm -rf /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
-touch /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
-chattr -i /storage/emulated/0/tencent/Midas/Log/com.tencent.ig
-chmod -R 555 /data/media/0/MidasOversea/GUID
 echo "__Replacing File for Game Crash.."
 sleep 3
 rm -rf /data/data/com.tencent.ig/app_bugly
@@ -132,7 +127,7 @@ mv /sdcard/.spjkbackup/* /$PAKS/
 rm -rf /sdcard/.spjkbackup
 }
 
-echo "√••••••••[START] Updated 21 April 2020•••••••••••••••••••••••••••••••••"
+echo "√••••••••[START] Updated 22 April 2020•••••••••••••••••••••••••••••••••"
 echo "[ VVIP PUBG MOBILE GLOBAL SPJK v2]"
 echo ""
 sleep 1
