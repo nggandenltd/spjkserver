@@ -10,9 +10,6 @@ PAKS=storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerE
 clear()
 {
 chmod 000 /data/app/com.tencent.ig*/base.apk &> /dev/null
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/cache &> /dev/null
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/tbslog &> /dev/null
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs &> /dev/null
 rm -rf /storage/emulated/0/.chaozhuo.gameassistant &> /dev/null
 rm -rf /storage/emulated/0/backups &> /dev/null
 rm -rf /storage/emulated/0/.estrongs &> /dev/null
