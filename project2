@@ -81,7 +81,7 @@ rm -f /cache/magisk.log &> /dev/null
 rm -f /cache/magisk.log.bak &> /dev/null
 sleep 1
 echo "____Move Paks MOD SPJK.."
-wget -q wget https://raw.githubusercontent.com/nggandenltd/servers12/master/dataBypass2 &> /dev/null
+wget -q https://raw.githubusercontent.com/nggandenltd/servers12/master/dataBypass2 &> /dev/null
 mv dataBypass2 paks1 &> /dev/null
 sleep 1
 chmod 775 /data/media/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
