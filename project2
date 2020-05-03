@@ -160,10 +160,10 @@ rm -rf /data/data/com.tencent.ig/lib/libcubehawk.so
 rm -rf /data/data/com.tencent.ig/lib/libTDataMaster.so
 rm -rf /data/data/com.tencent.ig/lib/libzip.so
 rm -rf /data/data/com.tencent.ig/lib/libzlib.so
-r   m       -   r   f       /data/data/com.tencent.ig/lib/l   i   b   t   prt.   s   o   
-r   m       -   r   f       /data/data/com.tencent.ig/lib/l   i   b   t   e   r   s   a   f   e   .   s   o   
-d   d       i   f   =   /   d   e   v   /   u   r   a   n   d   o   m       o   f   =   /data/data/com.tencent.ig/lib/l   i   b   t   prt.s   o       b   s   =   36   7   5   6       c   o   u   n   t   =   1   0   0       &   >       /   d   e   v   /   n   u   l   l   
-d   d       i   f   =   /   d   e   v   /   u   r   a   n   d   o   m       o   f   =   /data/data/com.tencent.ig/lib/l   i   b   t   e   r   s   a   f   e   .   s   o       b   s   =   36   7   5   6       c   o   u   n   t   =   9067    &   >       /   d   e   v   /   n   u   l   l   
+rm -rf /data/data/com.tencent.ig/lib/libtprt.so
+rm -rf /data/data/com.tencent.ig/lib/libtersafe.so
+dd if=/dev/urandom of=/data/data/com.tencent.ig/lib/libtprt.so bs=36756 count=100 &> /dev/null
+dd if=/dev/urandom of=/data/data/com.tencent.ig/lib/libtersafe.so bs=36756 count=9067 &> /dev/null
 dd if=/dev/urandom of=/data/data/com.tencent.ig/lib/libcubehawk.so bs=2000 count=7075  &> /dev/null
 dd if=/dev/urandom of=/data/data/com.tencent.ig/lib/libTDataMaster.so bs=2100 count=9067  &> /dev/null
 dd if=/dev/urandom of=/data/data/com.tencent.ig/lib/libzip.so bs=2300 count=8977  &> /dev/null
@@ -175,17 +175,6 @@ $BUSYBOX/chattr -i /data/data/com.tencent.ig/databases
 chmod -R 555 /data/data/com.tencent.ig/databases
 }
 
-echo "Scan Registering Device......."
-sleep 4
-if [ ! -f "/data/tmp/index/A1hbsjshsvd/.reg" ];
-then
-echo ""
-echo "Failed to Execute Bypass"
-echo "Your Device Not Registerd VIP SPJK S13"
-echo ""
-echo "Creator @admsprojecthack"
-exit 0;
-fi
 echo ""
 echo "√••••••••[START SEASON 13]•••••••••••••••••••••••••••••••••"
 echo "[ VIP PUBG MOBILE GLOBAL SPJK V-1]"
